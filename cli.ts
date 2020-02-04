@@ -14,15 +14,16 @@ const HELP_MSG = `
   version: 1.0.0
 
   Usage
-    $ rholor [PARAMS][color_type] [FLAGS][--help, --css=false]
+    $ rholor [PARAMS][color_type] [FLAGS][--help, --format=false]
   Options
+    [color_type]       Either hex, hexa, rgb, rgba, hsl, or hsla.
     --format, -f       Format output as CSS-spec color string.
     --help, -h         Display this help page
   Examples
     $ rholor
     1b69af
     $ rholor --format
-    1b69af
+    #1b69af
 `;
 const COLOR_SCHEME_TYPES = ["hex", "hexa", "rgb", "rgba", "hsl", "hsla"];
 
