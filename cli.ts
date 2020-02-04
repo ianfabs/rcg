@@ -10,19 +10,19 @@ const print = (text: string) => {
 }
 
 const HELP_MSG = `
-  rholor CLI ~ create by Ian Fabs<ian@fabs.dev>
+  rcg CLI ~ created by Ian Fabs<ian@fabs.dev>
   version: 1.0.0
 
   Usage
-    $ rholor [PARAMS][color_type] [FLAGS][--help, --format=false]
+    $ rcg [PARAMS][color_type] [FLAGS][--help, --format=false]
   Options
     [color_type]       Either hex, hexa, rgb, rgba, hsl, or hsla.
     --format, -f       Format output as CSS-spec color string.
     --help, -h         Display this help page
   Examples
-    $ rholor
+    $ rcg
     1b69af
-    $ rholor --format
+    $ rcg --format
     #1b69af
 `;
 const COLOR_SCHEME_TYPES = ["hex", "hexa", "rgb", "rgba", "hsl", "hsla"];
