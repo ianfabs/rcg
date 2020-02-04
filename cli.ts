@@ -1,16 +1,7 @@
 import { parse, ArgParsingOptions  } from "https://deno.land/std/flags/mod.ts";
 import "https://deno.land/x/eaisercolors/mod.ts"
 
-const args: { [key: string]: any; } = parse(Deno.args, {
-  alias: {
-    "h": "help",
-    "f": "format",
-  },
-  boolean: [
-    "help",
-    "format"
-  ]
-});
+const args = parse(Deno.args.slice(1, Deno.args.length));
 
 const print = (text: string) => {
   let encoder = new TextEncoder();
@@ -29,7 +20,9 @@ const HELP_MSG = `
     --help, -h         Display this help page
   Examples
     $ rholor
-
+    1b69af
+    $ rholor --format
+    1b69af
 `;
 const COLOR_SCHEME_TYPES = ["hex", "hexa", "rgb", "rgba", "hsl", "hsla"];
 
@@ -49,8 +42,7 @@ if (args._.includes("help") || args.help) {
   } else {
     print("Error:".red() + ` ${userColorScheme} is not a valid color scheme. \n`)
   }
-  const result = color?.default(args.format);
+  const result = color?.default(args.format ?? args.f);
   print(result?.join?.(", ") ?? result);
 }
-// console.log(color);
 Deno.stdin.close();
