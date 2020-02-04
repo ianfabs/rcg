@@ -1,4 +1,4 @@
-import { parse, ArgParsingOptions  } from "https://deno.land/std/flags/mod.ts";
+import { parse } from "https://deno.land/std/flags/mod.ts";
 import "https://deno.land/x/eaisercolors/mod.ts"
 
 const args = parse(Deno.args.slice(1, Deno.args.length));
