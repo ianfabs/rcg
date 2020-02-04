@@ -16,7 +16,7 @@ export const hsl = (asString: boolean = false): number[] | string => {
     // Lightness
     Number(special(0, 100, 1).toFixed(0))
   ];
-  return asString ? `hsl(${hsl[0]}, ${hsl[1]}, ${hsl[2]})` : hsl;
+  return asString ? `hsl(${hsl[0]}, ${hsl[1]}%, ${hsl[2]}%)` : hsl;
 };
 
 export default hsl;

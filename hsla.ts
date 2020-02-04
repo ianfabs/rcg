@@ -14,7 +14,7 @@ export const hsla = (asString: boolean = false): number[] | string => {
     Number(special(0, 100, 1).toFixed(0)),
     Number(special(0, 1, 0.0001).toFixed(2))
   ];
-  return asString ? `hsla(${hsla[0]}, ${hsla[1]}, ${hsla[2]}, ${hsla[3]})`: hsla;
+  return asString ? `hsla(${hsla[0]}, ${hsla[1]}%, ${hsla[2]}%, ${hsla[3]})`: hsla;
 };
 
 export default hsla;
