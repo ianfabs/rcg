@@ -1,3 +1,5 @@
+// import * as log from "https://deno.land/std/log/mod.ts";
+
 export type BufferSize = number;
 
 export interface IBufferCollection {
@@ -34,11 +36,23 @@ export const random = (bytes: BufferSize) => {
  * @returns {number} a cryptographically random number
  * */
 export const special = (min: number = 0.13, max: number = 1, constant: number = 0.00000000001): number => {
-  const v = (random(1)[0] * constant);
-  const [doesMin, doesMax] = [v >= min, v <= max];
-  if (doesMin && doesMax) return v;
-  else if (!doesMin && doesMax) return v + min;
-  else if (doesMin && !doesMax) return v % max;
+  // log.debug( "min => ", min );
+  // log.debug( "max => ", max );
+  // log.debug( "constant => ", constant );
+  const [ r ] = random( 1 );
+  // log.debug( "random number => ", r );
+  const v = ( r * constant );
+  // log.debug( "r * constant => ", v );
+  const [ doesMin, doesMax ] = [ v >= min, v <= max ];
+  // log.debug( "doesMin => ", doesMin );
+  // log.debug( "doesMax => ", doesMax );
+
+  let result;
+  if (doesMin && doesMax) result = v;
+  else if (!doesMin && doesMax) result = v + min;
+  else if ( doesMin && !doesMax ) result = v % max;
+  // log.debug("Result => ", result);
+  return result;
 }
 
 export default special;
