@@ -1,4 +1,4 @@
-import { random, special } from "./random.ts";
+import { random, special } from "../lib/random.ts";
 
 /**
  * Generates a random rgba color (that is, an rgb color with an alpha value).

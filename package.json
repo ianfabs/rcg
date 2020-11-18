@@ -1,0 +1,28 @@
+{
+  "name": "rcg",
+  "version": "1.0.0",
+  "description": "A fast random color genereator",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc ./mod.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ianfabs/rcg.git"
+  },
+  "keywords": [
+    "color",
+    "random",
+    "generator",
+    "hex",
+    "rgb",
+    "hsl"
+  ],
+  "author": "Ian Fabs",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ianfabs/rcg/issues"
+  },
+  "homepage": "https://github.com/ianfabs/rcg#readme"
+}

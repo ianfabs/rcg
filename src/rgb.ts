@@ -1,4 +1,4 @@
-import { random } from "./random.ts";
+import { random } from "../lib/random.ts";
 
 /**
  * Generates a random rgb color.

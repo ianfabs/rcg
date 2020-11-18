@@ -29,9 +29,9 @@ if (helpRequested) {
   console.log(HELP_MSG);
   Deno.exit(0);
 } else {
-  let userColorScheme: string = args._[0] ?? "hex";
+  let userColorScheme: string = args._[0] as string ?? "hex";
   if (COLOR_SCHEMES.includes(userColorScheme)) {
-    let importPath = `./${userColorScheme}.ts`;
+    let importPath = `./src/${userColorScheme}.ts`;
     let fnImport = await import(importPath);
     // Should probably just use default export
     // const fn = (fnImport?.[userColorScheme] ?? fnImport.default);

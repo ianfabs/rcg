@@ -1,4 +1,4 @@
-import special from "./random.ts";
+import special from "../lib/random.ts";
 
 /**
  * Generates a random hsl color.

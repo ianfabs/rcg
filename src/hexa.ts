@@ -1,4 +1,4 @@
-import special from "./random.ts";
+import special from "../lib/random.ts";
 
 /**
  * Generates a random hex-alpha color (that is, a hex color with an extra two digits representing an alpha value).
