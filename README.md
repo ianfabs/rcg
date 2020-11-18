@@ -1,4 +1,4 @@
-[![Gitpod ready-to-code](https://img.shields.io/badge/Gitpod-ready--to--code-blue?logo=gitpod)](https://gitpod.io/#https://github.com/ianfabs/rcg)
+[![Gitpod ready-to-code](https://img.shields.io/badge/Gitpod-ready--to--code-blue?logo=gitpod)](https://gitpod.io/#https://github.com/ianfabs/rcg) ![Node.js Package](https://github.com/ianfabs/rcg/workflows/Node.js%20Package/badge.svg?event=release)
 
 # RCG
 #### *Random Color Generator*
