@@ -40,11 +40,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+      - uses: denolib/setup-deno@v2.3.0
       - uses: actions/setup-node@v1
         with:
           node-version: 12
           registry-url: https://npm.pkg.github.com/
-      - uses: denolib/setup-deno@v2.3.0
       - run: npm run build:man
       - run: npm run build:lib
       - run: npm publish
