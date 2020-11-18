@@ -1,5 +1,0 @@
-{
-    "imports": {
-        "random": "lib/random.ts"
-    }
-}

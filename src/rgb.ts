@@ -1,15 +1,17 @@
-import { random } from "../lib/random.ts";
+import { toRatio } from "../lib/byte.ts";
+import mkcb, { ColorBytes } from "../lib/random.ts";
+import { ColorGenerator } from "../lib/types.ts";
 
+export type RGB = ColorBytes;
 /**
- * Generates a random rgb color.
+ * Generate a random rgb color.
  * @author Ian Fabs
- * @param asString - if true, this function will return a CSS-spec color string (i.e. "rgb(103, 46, 19)")
- * @returns {string} A CSS-spec rgb color string
- * @returns {number[]} An array of numbers representing rgb color values
+ * @param alpha - if true, an additional alpha-value will be included
+ * @returns An array of rgb color values
  */
-export const rgb = (asString: boolean = false): number[] | string => {
-  const rgb: number[] = [...random(3).map(n => n % 256)];
-  return asString ? `rgb(${rgb[0]}, ${rgb[1]}, ${rgb[2]})` : rgb;
+export const rgb: ColorGenerator<RGB> = (alpha = false) => {
+  const bytes = mkcb(alpha);
+  bytes[3] &&= toRatio(bytes[3]);
+  return bytes as RGB;
 };
-
 export default rgb;

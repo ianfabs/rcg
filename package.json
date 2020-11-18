@@ -1,11 +1,20 @@
 {
   "name": "rcg",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "A fast random color genereator",
   "main": "index.js",
+  "files": [
+    "index.js",
+    "package.json",
+    "yarn.lock",
+    "README.md"
+  ],
+  "man": [],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "tsc ./mod.ts"
+    "test": "deno test",
+    "build:lib": "deno bundle mod.ts | deno fmt - > index.js",
+    "build:man": "deno run --allow-read --allow-write ./scripts/man.ts",
+    "cli": "deno run --allow-read ./cli.ts --"
   },
   "repository": {
     "type": "git",

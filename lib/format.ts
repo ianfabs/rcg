@@ -11,4 +11,9 @@ const { isArray } = Array;
  * @param type The type the color should be formatted to
  * @returns A CSS color
  */
-export const cfmt = (color: Color, type: "hex" | "rgb" | "hsl"): string => isArray(color) ? `${type}${color.length == 4 && 'a'}(${color.join()})` : `#${color}`;
+export const cfmt = (color: Color, type: string): string =>
+  isArray(color) // TODO: fix formating for hsl (middle two values have '%' after them)
+    ? `${type}${color.length == 4 && "a" || ''}(${color.join()})`
+    : `#${color}`;
+
+export default cfmt;
