@@ -1,0 +1,37 @@
+{
+  "name": "rcg",
+  "version": "1.1.0",
+  "description": "A fast random color genereator",
+  "main": "index.js",
+  "files": [
+    "index.js",
+    "package.json",
+    "yarn.lock",
+    "README.md"
+  ],
+  "man": [],
+  "scripts": {
+    "test": "deno test",
+    "build:lib": "deno bundle mod.ts | deno fmt - > index.js",
+    "build:man": "deno run --allow-read --allow-write ./scripts/man.ts",
+    "cli": "deno run --allow-read ./cli.ts --"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ianfabs/rcg.git"
+  },
+  "keywords": [
+    "color",
+    "random",
+    "generator",
+    "hex",
+    "rgb",
+    "hsl"
+  ],
+  "author": "Ian Fabs",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ianfabs/rcg/issues"
+  },
+  "homepage": "https://github.com/ianfabs/rcg#readme"
+}
