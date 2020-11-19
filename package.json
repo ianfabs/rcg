@@ -35,6 +35,5 @@
   "bugs": {
     "url": "https://github.com/ianfabs/cs-rcg/issues"
   },
-  "homepage": "https://github.com/ianfabs/cs-rcg#readme",
-  "publishConfig": { "registry": "https://npm.pkg.github.com/" }
+  "homepage": "https://github.com/ianfabs/cs-rcg#readme"
 }
