@@ -3,7 +3,7 @@
 # CS-RCG
 #### *Cryptographically-Secure Random Color Generator*
 
-A tiny, and fast random color generator. Generates hex, rgb, and hsl colors (Optionally with alpha-values).
+A tiny, and fast random color generator. Generates hex, rgb, and hsl colors (Optionally with alpha-values). I got the idea from my implementation of nanoid for Deno. The way the random values are generated ensures (mostly) true randomness. I also like using/learning new Web APIs, and Web Crypto is pretty cool.
 
 # Usage
 
