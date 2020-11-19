@@ -18,7 +18,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ianfabs/rcg.git"
+    "url": "git+https://github.com/ianfabs/cs-rcg.git"
   },
   "keywords": [
     "color",
@@ -31,8 +31,8 @@
   "author": "Ian Fabs",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/ianfabs/rcg/issues"
+    "url": "https://github.com/ianfabs/cs-rcg/issues"
   },
-  "homepage": "https://github.com/ianfabs/rcg#readme",
+  "homepage": "https://github.com/ianfabs/cs-rcg#readme",
   "publishConfig": { "registry": "https://npm.pkg.github.com/" }
 }
