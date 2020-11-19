@@ -9,7 +9,9 @@
     "yarn.lock",
     "README.md"
   ],
-  "man": [],
+  "man": [
+    "./MANPAGE"
+  ],
   "scripts": {
     "test": "deno test",
     "build:lib": "deno bundle mod.ts | deno fmt - > index.js",
